@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(90deg, #FDBB2D 0%, #22C1C3 100%);
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-input,
+.todo-button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
+}
+
+.todo-input:focus,
+.todo-button:focus {
+    outline: none;
+}
+
+.todo-button {
+    color: #22C1C3;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.todo-button:hover {
+    background: #22C1C3;
+    color: white;    
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style-type: none;
+    min-width: 20%;    
+}
+
+.todo {
+    margin: 0.5rem;     
+    background: white;
+    color: black;
+    font-size: 1.3rem;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    transition: all .5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+    padding: 0 0.5rem;
+}
+
+.complete-btn {
+    background-color: rgb(32, 236, 32);
+    color: white;
+    border: none;
+    padding: 0.5rem;     
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.trash-btn {
+    background-color: rgb(233, 8, 20);
+    color: white;
+    border: none;
+    padding: 0.5rem;       
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-btn,
+.trash-btn {
+    outline: none;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(30deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-todo {
+    color: #FDBB2D;
+    width: 10rem;
+    font-size: 0.8rem;   
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #eba817;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after {
+    background: white;
+    color: #eba817
+}
+
+/* Media Query */
+@media screen and (max-width: 600px) {
+    form {
+        /* padding: 0 1rem; */
+        padding-left: 1rem;
+    }
+}
+
+
+
+
